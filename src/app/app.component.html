@@ -1,24 +1,25 @@
 <div id="if-test">
-@if (flagTest)
-{
+  @if (checkBoolean())
+    {
   <span>Is true</span>
-}
-@else
-{
+    }
+  @else
+    {
   <span>Is false</span>
-}
+    }
 </div>
 <div id="for-test">
-@for (singleItem of arrayTest; let i = $index; track singleItem.id)
-{
+  @for (singleItem of arrayTest; let i = $index; track singleItem.id)
+    {
   <div [id]="'for-' + i">
     <span>name: {{singleItem.name}}</span>
-</div>
-}
-@empty
-{
+    <span>name: {{singleItem.name}}</span>
+  </div>
+    }
+  @empty
+    {
   <div>
     <span>No item in arrayTest</span>
-</div>
-}
+  </div>
+    }
 </div>

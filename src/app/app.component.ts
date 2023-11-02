@@ -18,4 +18,8 @@ export class AppComponent {
     { id: 2, name: 'mario' },
     { id: 3, name: 'rossi' },
   ];
+
+  public checkBoolean(): boolean {
+    return this.flagTest;
+  }
 }
